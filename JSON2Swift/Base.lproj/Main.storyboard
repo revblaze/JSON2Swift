@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <plugIn identifier="com.apple.WebKit2IBPlugin" version="17701"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -698,7 +699,7 @@
                                     <textField key="view" verticalHuggingPriority="750" id="rCQ-uj-ahR">
                                         <rect key="frame" x="0.0" y="14" width="96" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Model Name" bezelStyle="round" id="Ji4-bb-Nui">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Model Name (ie. Welcome)" bezelStyle="round" id="Ji4-bb-Nui">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -707,16 +708,14 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="L14-iT-2Al"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="U7V-XA-PfU"/>
-                                <toolbarItem implicitItemIdentifier="26231A6E-95BF-415F-81B6-FBF79E365C41" label="Generate" paletteLabel="Generate Swift" tag="-1" image="swift" catalog="system" id="Sd6-GY-5Yl">
-                                    <size key="minSize" width="49" height="30"/>
-                                    <size key="maxSize" width="49" height="30"/>
+                                <toolbarItem implicitItemIdentifier="26231A6E-95BF-415F-81B6-FBF79E365C41" label="Generate" paletteLabel="Generate Swift" tag="-1" sizingBehavior="auto" id="Sd6-GY-5Yl">
+                                    <imageReference key="image" image="swift" catalog="system" symbolScale="large"/>
                                     <connections>
                                         <action selector="generateButtonAction:" target="B8D-0N-5wS" id="MUs-7N-Qpq"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="3B2BF3C6-0599-417B-8780-74A77B490E60" label="Copy" paletteLabel="Copy" tag="-1" image="doc.on.clipboard.fill" catalog="system" id="Y8w-Ya-Bt6">
-                                    <size key="minSize" width="39" height="31"/>
-                                    <size key="maxSize" width="39" height="31"/>
+                                <toolbarItem implicitItemIdentifier="3B2BF3C6-0599-417B-8780-74A77B490E60" label="Copy" paletteLabel="Copy" tag="-1" sizingBehavior="auto" id="Y8w-Ya-Bt6">
+                                    <imageReference key="image" image="doc.on.clipboard.fill" catalog="system" symbolScale="large"/>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="oRs-IL-Czy"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="cIA-S9-7kc"/>
@@ -725,7 +724,6 @@
                                 <toolbarItem reference="Za8-1e-G3Z"/>
                                 <toolbarItem reference="cIA-S9-7kc"/>
                                 <toolbarItem reference="oRs-IL-Czy"/>
-                                <toolbarItem reference="cIA-S9-7kc"/>
                                 <toolbarItem reference="Sd6-GY-5Yl"/>
                                 <toolbarItem reference="Y8w-Ya-Bt6"/>
                             </defaultToolbarItems>
@@ -875,7 +873,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc.on.clipboard.fill" catalog="system" width="16" height="18"/>
-        <image name="swift" catalog="system" width="16" height="14"/>
+        <image name="doc.on.clipboard.fill" catalog="system" width="20" height="23"/>
+        <image name="swift" catalog="system" width="20" height="17"/>
     </resources>
 </document>
