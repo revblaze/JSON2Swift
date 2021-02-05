@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2246BDA25CCB10900FB06AC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2246BD925CCB10900FB06AC /* Notifications.swift */; };
 		C28B4D4825CC59820024C582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B4D4725CC59820024C582 /* AppDelegate.swift */; };
 		C28B4D4A25CC59820024C582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B4D4925CC59820024C582 /* ViewController.swift */; };
 		C28B4D4C25CC59820024C582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B4D4B25CC59820024C582 /* Assets.xcassets */; };
@@ -19,10 +20,10 @@
 		C28B4D7125CC65E40024C582 /* WKRunScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B4D7025CC65E40024C582 /* WKRunScript.swift */; };
 		C28B4D7925CC66B90024C582 /* dist in Resources */ = {isa = PBXBuildFile; fileRef = C28B4D7825CC66B90024C582 /* dist */; };
 		C28B4D7E25CC78020024C582 /* EditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B4D7D25CC78020024C582 /* EditorConfiguration.swift */; };
-		C28B4D8325CC96BF0024C582 /* EditorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B4D8225CC96BF0024C582 /* EditorCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2246BD925CCB10900FB06AC /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C28B4D4425CC59820024C582 /* JSON2Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON2Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B4D4725CC59820024C582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28B4D4925CC59820024C582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		C28B4D7025CC65E40024C582 /* WKRunScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKRunScript.swift; sourceTree = "<group>"; };
 		C28B4D7825CC66B90024C582 /* dist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dist; path = WKTypeScript/dist; sourceTree = SOURCE_ROOT; };
 		C28B4D7D25CC78020024C582 /* EditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorConfiguration.swift; sourceTree = "<group>"; };
-		C28B4D8225CC96BF0024C582 /* EditorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				C28B4D4725CC59820024C582 /* AppDelegate.swift */,
+				C2246BD925CCB10900FB06AC /* Notifications.swift */,
 				C28B4D4925CC59820024C582 /* ViewController.swift */,
 				C28B4D5A25CC5AEF0024C582 /* WindowController.swift */,
 				C28B4D7C25CC77E50024C582 /* Editors */,
@@ -125,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				C28B4D7D25CC78020024C582 /* EditorConfiguration.swift */,
-				C28B4D8225CC96BF0024C582 /* EditorCode.swift */,
 			);
 			path = Editors;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28B4D7125CC65E40024C582 /* WKRunScript.swift in Sources */,
-				C28B4D8325CC96BF0024C582 /* EditorCode.swift in Sources */,
+				C2246BDA25CCB10900FB06AC /* Notifications.swift in Sources */,
 				C28B4D6D25CC65D70024C582 /* JSManager.swift in Sources */,
 				C28B4D6325CC65540024C582 /* Extensions.swift in Sources */,
 				C28B4D7E25CC78020024C582 /* EditorConfiguration.swift in Sources */,

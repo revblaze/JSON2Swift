@@ -18,16 +18,10 @@ extension ViewController {
         webView.allowsLinkPreview = false                   // Disable Link Preview
         webView.allowsMagnification = false                 // Disable Magnification
         webView.allowsBackForwardNavigationGestures = false // Disable Back-Forward Gestures
-        //webView.customUserAgent = Client.userAgent          // Set Client UserAgent
-        // WebView Configuration
-        //webView.configuration.applicationNameForUserAgent = Client.name
         // JavaScript Event Listeners
         webView.configuration.userContentController.add(self, name: "eventListeners")
-        webView.setValue(false, forKey: "drawsBackground")
         // Load QuickType
         webView.load("https://app.quicktype.io/")
-        
-        
     }
     
     func clearCache() {

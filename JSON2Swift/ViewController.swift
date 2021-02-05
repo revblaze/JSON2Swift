@@ -16,68 +16,22 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, WKSc
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var jsonCode: NSTextView!
     @IBOutlet weak var outputCode: NSTextView!
-    
     @IBOutlet weak var progressBar: NSProgressIndicator!
     
     var tempCode = ""
-    var templateSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.generateSwift(_:)), name: .willGenerateSwift, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeTemplate(_:)), name: .didChangeTemplate, object: nil)
+        notificationObservers()
         
         initEditors()
         initWebView()
     }
     
-    override func viewDidAppear() {
-        //progressBar.stopAnimation(self)
-    }
-    
-    @objc func didChangeTemplate(_ notification: Notification) {
-        print("Changed!")
-    }
-
-    @objc func generateSwift(_ notification: Notification) {
-        progressBar.startAnimation(self)
-        
-        if debug { print("Inserting JSON") }
-        
-        let json = jsonCode.string
-        run(Function.insertJSON(json))
-        
-        print("Generating Swift")
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            //self.run(Function.getCode)
-            //self.tempCode = self.runWithResult(Function.getCode)
-            /*
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.updateCode(self.tempCode)
-            }
-            */
-        }
-    }
-    
-    func updateCode(_ code: String) {
-        //if code != tempCode { }
-        outputCode.string = code
-    }
-    
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        //run(JS.get())
-    }
-    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         //run(JS.get(file: "custom"))
-        
         run(JS.get())
         run(Function.setupAceEditor)
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            self.run(Function.setupAceEditor)
-//        }
     }
     
     // MARK:- JSON Messaging
@@ -115,10 +69,6 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, WKSc
                 if message.contains("[ACE] BUFFER") {
                     searchFlag = true
                 }
-                
-                
-                
-                //handleJS(message)
             }
         }
     }
@@ -135,8 +85,3 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate, WKSc
 
 
 
-// MARK: Extensions
-extension Notification.Name {
-    static let willGenerateSwift = Notification.Name("willGenerateSwift")
-    static let didChangeTemplate = Notification.Name("didChangeTemplate")
-}
